@@ -17,8 +17,18 @@ body{
     --primary-color:#6c6cfb;
     --primary-hover:#5454ff;
     --grey-border:#919191;
+    --background-color:#f6f6ff;
+    --bg-primary:#ffffff;
+    --text:#000000;
 }
-
+.night-mode{
+    --primary-color:#6c6cfb;
+    --primary-hover:#5454ff;
+    --grey-border:#919191;
+    --background-color:#333333;
+    --bg-primary:#282828;
+    --text:#ffffff;
+}
 .navbar{
     width:100%;
     position:fixed;
@@ -27,15 +37,40 @@ body{
     align-items:center;
     justify-content:space-between;
     padding:15px 30px;
-    box-shadow:0px 1px 8px rgb(75, 75, 75);
-    background-color:white;
 }
 .logo span{
     font-size:32px;
     font-weight:bold;
+    color:var(--text)
 }
 .logo i{
     color:var(--primary-color);
+}
+.dashboard-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.night-mode-btn{
+    padding:10px;
+    border-radius:50px;
+    border:2px solid transparent;
+    color:var(--text);
+    background-color:var(--bg-primary);
+}
+
+.light-mode-btn{
+    padding:10px;
+    border-radius:50px;
+    border:2px solid transparent;
+    color:var(--text);
+    background-color:var(--bg-primary);
+}
+.light-mode-btn:hover{
+    border:2px solid var(--text);
+}
+.night-mode-btn:hover{
+    border:2px solid var(--text);
 }
 #dashboard-btn{
     padding:10px;
@@ -44,7 +79,7 @@ body{
     border-radius:10px;
     border:none;
     background-color:var(--primary-color);
-    color:white;
+    color:var(--bg-primary);
     display:flex;
     gap:4px;
     align-items:center;
@@ -61,22 +96,28 @@ body{
     position:absolute;
     top:83px;
     right:30px;
-    background-color:white;
+    background-color:var(--bg-primary);
     border:2px solid var(--primary-color);
     border-radius:20px;
     padding:15px;
     display:flex;
     align-items:center;
     justify-content:center;
+    color:var(--text);
 }
+
+.hide{
+    display:none !important;
+}
+
 .alert-btn{
     position:absolute;
     top:8px;
     right:8px;
-    font-size:16px;
-    background-color:white;
+    font-size:20px;
+    background-color:var(--bg-primary);
     border:none;
-
+    cursor:pointer;
 }
 .main{
     display:flex;
@@ -85,7 +126,7 @@ body{
     justify-content:center;
     align-items:center;
     padding:83px 30px 15px 30px;
-    background-color:rgb(246, 246, 255);
+    background-color:var(--background-color);
 }
 
 .sign-up-form{
@@ -93,9 +134,9 @@ body{
     width:370px;
     padding:20px;
     flex-direction:column;
-    border:1px solid var(--grey-border);
+    border:2px solid var(--grey-border);
     border-radius:20px;
-    background-color:white;
+    background-color:var(--bg-primary);
 }
 .form-head{
     width:100%;
@@ -103,6 +144,7 @@ body{
     margin-bottom:20px;
     font-size:24px;
     font-weight:600;
+    color:var(--text);
 }
 .input-fields{
     display:flex;
@@ -116,18 +158,22 @@ body{
     border:1px solid var(--grey-border);
     outline:none;
     font-size:16px;
+    color:var(--text);
+    background-color:var(--background-color);
 }
 .input-fields label{
     margin-bottom:8px;
     font-size:14px;
+    color:var(--text);
 }
 .advice{
     width:100%;
     text-align:end;
     margin-bottom:10px;
+    color:var(--text);
 }
 .advice button{
-    background-color:white;
+    background-color:var(--bg-primary);
     border:none;
     font-size:12px;
     color:var(--primary-color);
@@ -148,7 +194,7 @@ body{
     border-radius:10px;
     border:none;
     background-color:var(--primary-color);
-    color:white;
+    color:var(--bg-primary);
     transition:all ease-out 100ms;
     cursor:pointer;
 }
@@ -162,7 +208,7 @@ body{
     flex-direction:column;
     border:1px solid var(--grey-border);
     border-radius:20px;
-    background-color:white;
+    background-color:var(--bg-primary);
 }
 #tryagain-time{
     font-size:12px;
@@ -175,5 +221,5 @@ body{
     flex-direction:column;
     border:1px solid var(--grey-border);
     border-radius:20px;
-    background-color:white;
+    background-color:var(--bg-primary);
 }
