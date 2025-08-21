@@ -33,11 +33,11 @@
                 </div>
                 <div class="input-fields">
                     <label>Enter your Name</label>
-                    <input type="text" placeholder="John Snow..."/>
+                    <input type="text" id="name" name='name' placeholder="John Snow..."/>
                     <label>Enter your Adhaar No.</label>
-                    <input type="text" placeholder="XXXX XXXX XXXX"/>
+                    <input type="text" id="aadhar" name="aadhar" placeholder="XXXX XXXX XXXX"/>
                     <label>Enter your Registered Mobile No.</label>
-                    <input type="text" placeholder="+91 XXXXX XXXXX"/>
+                    <input type="text" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"/>
                 </div>
                 <div class="advice">
                     <button type="button" class="login-gate">already have an account? login</button>
@@ -46,13 +46,13 @@
                     <button type="submit">Generate OTP</button>
                 </div>
             </form>
-            <form class="login-form">
+            <form class="login-form" id="loginForm">
                 <div class="form-head">
                     <span>Login to your account</span>
                 </div>
                 <div class="input-fields">
                     <label>Enter the registered mobile no.</label>
-                    <input type="number" placeholder="+91 XXXXX XXXXX"/>
+                    <input type="number" id="loginPhone" placeholder="+91 XXXXX XXXXX"/>
                 </div>
                 <div class="submit-form">
                     <button type="submit">Generate OTP</button>
@@ -64,18 +64,22 @@
                 </div>
                 <div class="input-fields">
                     <label>Enter the OTP</label>
-                    <input type="number" placeholder="XXXX"/>
+                    <input type="number" id="otp" placeholder="XXXX"/>
                 </div>
                 <div class="advice">
-                    <button type="button" class="tryagain-btn">Try again</button><span id="tryagain-time"> in 30s</span>
+                    <button type="button" id="resendOtp" class="tryagain-btn">Try again</button><span id="tryagain-time"> in 30s</span>
                 </div>
                 <div class="submit-form">
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="verifyOtp">Submit</button>
                 </div>
             </form>
         </div>
         <div class="footer"></div>
     </div>
     <script src="../src/js/app.js"></script>
+    <script type="module" src="../src/js/login.js"></script>
+    <script type="module" src="../src/js/signup.js"></script>
+    <script type="module" src="../src/js/otp.js"></script>
+    
 </body>
 </html>
