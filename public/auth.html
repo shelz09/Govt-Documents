@@ -14,14 +14,39 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <span>Docsafe</span>
+                <span><i class="fa-solid fa-file-shield"></i>Docsafe</span>
             </div>
             <div class="dashboard-btn">
                 <button id="dashboard-btn">Dashboard <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
+        <div class="alert"></div>
         <div class="main">
-            
+            <form class="sign-up-form">
+                <div class="form-head">
+                    <span>Welcome to Docsafe!</span>
+                </div>
+                <div class="input-fields">
+                    <label>Enter your Name</label>
+                    <input type="text" required placeholder="John Snow..."/>
+                    <label>Enter your Adhaar No.</label>
+                    <input type="text" required placeholder="XXXX XXXX XXXX"/>
+                    <label>Enter your Registered Mobile No.</label>
+                    <input type="text" required placeholder="+91 XXXXX XXXXX"/>
+                </div>
+                <div class="advice">
+                    <button>already have an account? Signin</button>
+                </div>
+                <div class="submit-form">
+                    <button>Generate OTP</button>
+                </div>
+            </form>
+            <form class="sign-in-form hide">
+                <input/>
+            </form>
+            <form class="optp-verify-form hide">
+                <input/>
+            </form>
         </div>
         <div class="footer"></div>
     </div>

@@ -15,23 +15,31 @@ body{
 
 :root{
     --primary-color:#6c6cfb;
+    --primary-hover:#5454ff;
+    --grey-border:#919191;
 }
 
 .navbar{
     width:100%;
+    position:fixed;
+    top:0;
     display: flex;
     align-items:center;
     justify-content:space-between;
     padding:15px 30px;
     box-shadow:0px 1px 8px rgb(75, 75, 75);
+    background-color:white;
 }
 .logo span{
     font-size:32px;
     font-weight:bold;
 }
+.logo i{
+    color:var(--primary-color);
+}
 #dashboard-btn{
     padding:10px;
-    font-size:15px;
+    font-size:16px;
     font-weight:500;
     border-radius:10px;
     border:none;
@@ -40,10 +48,99 @@ body{
     display:flex;
     gap:4px;
     align-items:center;
+    transition:all ease-out 100ms;
+    cursor:pointer;
 }
 
+#dashboard-btn:hover{
+    background-color:var(--primary-hover);
+}
+.alert{
+    width:200px;
+    height:80px;
+    position:absolute;
+    top:83px;
+    right:30px;
+    background-color:white;
+    border:2px solid var(--primary-color);
+    border-radius:20px;
+}
 .main{
     display:flex;
-    align-items:center;
+    width:100%;
+    height:100vh;
     justify-content:center;
+    align-items:center;
+    padding:83px 30px 15px 30px;
+    background-color:rgb(246, 246, 255);
+}
+.hide{
+    display:none;
+}
+.sign-up-form{
+    display:flex;
+    width:370px;
+    padding:20px;
+    flex-direction:column;
+    border:1px solid var(--grey-border);
+    border-radius:20px;
+    background-color:white;
+}
+.form-head{
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:24px;
+    font-weight:600;
+}
+.input-fields{
+    display:flex;
+    flex-direction:column;
+}
+.input-fields input{
+    margin-bottom:15px;
+    height:40px;
+    padding-left:10px;
+    border-radius:10px;
+    border:1px solid var(--grey-border);
+    outline:none;
+    font-size:16px;
+}
+.input-fields label{
+    margin-bottom:8px;
+    font-size:14px;
+}
+.advice{
+    width:100%;
+    text-align:end;
+    margin-bottom:10px;
+}
+.advice button{
+    background-color:white;
+    border:none;
+    font-size:12px;
+    color:var(--primary-color);
+    border-bottom:1px solid transparent;
+    cursor:pointer;
+}
+.advice button:hover{
+    border-bottom:1px solid var(--primary-hover);
+    color:blue;
+}
+.submit-form{
+    width:100;
+    text-align:center;
+}
+.submit-form button{
+    font-size:16px;
+    padding:8px;
+    border-radius:10px;
+    border:none;
+    background-color:var(--primary-color);
+    color:white;
+    transition:all ease-out 100ms;
+    cursor:pointer;
+}
+.submit-form button:hover{
+    background-color:var(--primary-hover);
 }
