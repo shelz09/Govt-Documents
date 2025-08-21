@@ -11,34 +11,9 @@ const alertbox = document.querySelector(".alert");
 const lightmode = document.querySelector(".light-mode-btn");
 const nightmode = document.querySelector(".night-mode-btn");
 
-otp_form.style.display = "none";
-login_form.style.display = "none";
 
 
 
-
-const handleSignup = (e) => {
-    e.preventDefault();
-    signup_form.style.display="none";
-    otp_form.style.display="flex";
-}
-
-const loginGate = () =>{
-    signup_form.style.display = "none";
-    login_form.style.display = "flex";
-    otp_form.style.display = "none";
-}
-const handleLogin = (e) => {
-    e.preventDefault();
-    signup_form.style.display="none";
-    login_form.style.display = "none";
-    otp_form.style.display="flex";
-}
-
-
-signup_form.addEventListener("submit", handleSignup);
-login_form.addEventListener("submit", handleLogin)
-login_gate.addEventListener("click", loginGate);
 openAlert.addEventListener("click", ()=>{
     alertbox.classList.toggle("hide");
 });
