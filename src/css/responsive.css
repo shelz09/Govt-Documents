@@ -1,0 +1,19 @@
+@media(max-width:885px){
+    .main{
+        flex-direction:column;
+        height:auto;
+        gap:50px;
+        padding-bottom:50px;
+    }
+    .main-txt{
+        width:100%;
+        justify-content:center;
+        align-items:center;
+    }
+    .main-form{
+        width:100%;
+    }
+    #dashboard-btn{
+        display:none;
+    }
+}
