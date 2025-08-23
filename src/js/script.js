@@ -1,6 +1,4 @@
 const login_gate = document.querySelector('.login-gate');
-const openAlert = document.getElementById("dashboard-btn");
-const closeAlert = document.querySelector(".alert-btn");
 const alertbox = document.querySelector(".alert");
 const lightmode = document.querySelector(".light-mode-btn");
 const nightmode = document.querySelector(".night-mode-btn");
@@ -8,8 +6,7 @@ const navbar = document.querySelector(".navbar");
 const SignupForm = document.querySelector(".sign-up-form");
 const loginForm = document.querySelector(".login-form");
 const loginGate = document.querySelector(".login-gate");
-const namelabel = document.querySelector(".nameLabel");
-const adhrlbl = document.querySelector(".aadhaarLabel");
+const logout = document.getElementById("dashboard-btn");
 const SignupGate = document.querySelector(".signup-gate");
 
 const handleScroll = () => {
@@ -39,14 +36,6 @@ if (localStorage.getItem("theme") === "night") {
 // --- Page redirection ---
 
 
-// --- Alert toggle ---
-openAlert.addEventListener("click", () => {
-    alertbox.classList.toggle("hide");
-});
-closeAlert.addEventListener("click", () => {
-    alertbox.classList.add("hide");
-});
-
 // --- Night Mode On ---
 nightmode.addEventListener("click", () => {
     document.body.classList.add("night-mode");
@@ -71,4 +60,9 @@ loginGate.addEventListener("click", ()=>{
 SignupGate.addEventListener("click", ()=>{
     loginForm.classList.add("hide");
     SignupForm.classList.remove("hide");
+})
+logout.addEventListener("click", ()=>{
+    document.querySelector(".main").classList.remove("hide");
+    document.querySelector(".dashboard").classList.add("hide");
+    document.getElementById("dashboard-btn").classList.remove("hide");
 })

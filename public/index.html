@@ -19,12 +19,8 @@
             <div class="dashboard-btn">
                 <button class="light-mode-btn hide"><i class="fa-solid fa-sun"></i></button>
                 <button class="night-mode-btn"><i class="fa-solid fa-moon"></i></button>
-                <button id="dashboard-btn">Dashboard <i class="fa-solid fa-arrow-right"></i></button>
+                <button id="dashboard-btn" class="hide">Logout <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-        </div>
-        <div class="alert hide">
-            <span>you must login to access the dashboard</span>
-            <button class="alert-btn">x</button>
         </div>
         <div class="main">
             <div class="main-txt">
@@ -53,10 +49,10 @@
                     <div class="input-fields">
                         <label class="nameLabel">Enter your Name</label>
                         <input type="text" id="name" name='name' placeholder="John Snow..."/>
-                        <label class="aadhaarLabel">Enter your Adhaar No.</label>
-                        <input type="text" id="aadhaar" name="aadhar" placeholder="XXXX XXXX XXXX"/>
-                        <label>Enter your Registered Mobile No.</label>
-                        <input type="text" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"/>
+                        <label class="aadhaarLabel">Enter your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@fkme.com"/>
+                        <label>Enter your Password</label>
+                        <input type="password" id="password" name="password" placeholder="password"/>
                     </div>
                     <div class="advice">
                         <button type="button" class="login-gate">already have an account? login</button>
@@ -70,8 +66,10 @@
                         <span>Login</span>
                     </div>
                     <div class="input-fields">
-                        <label>Enter your Registered Mobile No.</label>
-                        <input type="text" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"/>
+                        <label>Enter your Email</label>
+                        <input type="email" class="email" name="email" placeholder="john@fukcmail.com"/>
+                        <label>Enter your Password</label>
+                        <input type="password" class="password" name="password" placeholder="password"/>
                     </div>
                     <div class="advice">
                         <button type="button" class="signup-gate">dont have an account? signup</button>
@@ -82,16 +80,25 @@
                 </form>
             </div>
         </div>
+        <div class="dashboard hide"></div>
         <div class="footer">
-            <div class="footer-creator"></div>
-            <div class="footer-links"></div>
+            <div class="footer-creator">
+                <span>Made by Shlesh Choudhary</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
         </div>
     </div>
-    <script src="../src/js/script.js"></script>
+    <script src="/src/js/script.js"></script>
+    
     <script
   src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
   type="module"
 ></script>
-    
+
+<script type="module" src="/src/js/auth.js"></script>
+
 </body>
 </html>

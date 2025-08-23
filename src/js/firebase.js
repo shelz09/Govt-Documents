@@ -1,15 +1,7 @@
-// Import Firebase SDKs - same version for all modules
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { 
-  getAuth, 
-  RecaptchaVerifier, 
-  signInWithPhoneNumber,
-  PhoneAuthProvider, 
-  signInWithCredential 
-} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-// Your Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyDwuEBa5nyhXX_ifWp8rogZu1Syt331OzE",
   authDomain: "docsafe-6da37.firebaseapp.com",
@@ -23,16 +15,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
+const db = getFirestore(app);  // <-- Add this
 
-console.log("Firebase initialized successfully");
-
-// Export for other scripts
-export {
-  auth,
-  db,
-  RecaptchaVerifier,
-  signInWithPhoneNumber,
-  PhoneAuthProvider,
-  signInWithCredential
-};
+// Export everything you need
+export { app, auth, db };
