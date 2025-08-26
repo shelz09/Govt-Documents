@@ -13,7 +13,11 @@
     .main-form{
         width:100%;
     }
-    #dashboard-btn{
+    .sidebar{
         display:none;
     }
+    .dashboard-main{
+        width:100%;
+    }
 }
+
